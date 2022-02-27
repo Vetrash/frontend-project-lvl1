@@ -14,6 +14,7 @@ while (score <= 2) {
     else { check = "no"; }
 
     score = Check(check, answer, score);
+    if(score==-1){break;}
 }
-Ending();
+if(score!=-1){Ending();}
 

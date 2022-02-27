@@ -11,7 +11,7 @@ export const Ending = () => {
     console.log(`Congratulations, ${name}!`);
 }
 
-export const Check=(check,answer,score)=>{
+export const Check = (check, answer, score) => {
     if (check == answer) {
         console.log("Correct!");
         score++;
@@ -19,7 +19,7 @@ export const Check=(check,answer,score)=>{
     else {
         console.log(`'${answer}' is wrong answer. Correct answer was '${check}' `);
         console.log(`Let's try again, ${name}!`);
-        score = 0;
+        score = -1;
     }
     return score;
 };

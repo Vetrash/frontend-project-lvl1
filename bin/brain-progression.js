@@ -21,10 +21,8 @@ while (score <= 2) {
     console.log(`Question: ${myArray.join(" ")}`);
     const answer = readlineSync.question("Your answer: ");
 
-
-
-
     score = Check(check, answer, score);
+    if(score==-1){break;}
 }
-Ending();
+if(score!=-1){Ending();}
 
