@@ -1,5 +1,5 @@
 import readlineSync from "readline-sync";
-
+import Chek from "../src/check.js";
 
 const progression = (name) => {
 
@@ -23,16 +23,7 @@ const progression = (name) => {
 
 
 
-        if (check == answer) {
-            console.log("Correct!");
-            score++;
-        }
-        else {
-            console.log(`'${answer}' is wrong answer. Correct answer was '${check}' `);
-            console.log(`Let's try again, ${name}!`);
-            score = 0;
-
-        }
+        score=Chek(check,answer,name,score);
     }
     console.log(`Congratulations, ${name}!`);
 };

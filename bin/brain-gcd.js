@@ -1,6 +1,5 @@
 import readlineSync from "readline-sync";
-
-
+import Chek from "../src/check.js";
 const gcd = (name) => {
 
     console.log("Find the greatest common divisor of given numbers.");
@@ -19,15 +18,7 @@ const gcd = (name) => {
             if (number1 % i === 0 && number2 % i === 0) { check = i; }
         }
 
-        if (check == answer) {
-            console.log("Correct!");
-            score++;
-        }
-        else {
-            console.log(`'${answer}' is wrong answer. Correct answer was '${check}' `);
-            console.log(`Let's try again, ${name}!`);
-            score = 0;
-        }
+        score=Chek(check,answer,name,score);
     }
     console.log(`Congratulations, ${name}!`);
 };
