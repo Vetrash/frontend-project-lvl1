@@ -13,10 +13,9 @@ export const Ending = () => {
 };
 
 export const Check = (check, answer) => {
-  if (check == answer && answer.length !== 0) {
+  if (String(check) === answer && answer.length !== 0) {
     console.log('Correct!');
-  }
-  else {
+  } else {
     console.log(`'${answer}' is wrong answer. Correct answer was '${check}' `);
     console.log(`Let's try again, ${name}!`);
     return -1;

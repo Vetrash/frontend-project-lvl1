@@ -10,8 +10,7 @@ for (let i = 0; i < 3; i += 1) {
   console.log(`Question: ${number}`);
   const answer = readlineSync.question('Your answer: ');
   let check;
-  if (number % 2 === 0) { check = 'yes'; }
-  else { check = 'no'; }
+  if (number % 2 === 0) { check = 'yes'; } else { check = 'no'; }
   score = Check(check, answer);
   if (score === -1) { break; }
 }

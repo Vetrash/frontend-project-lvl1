@@ -12,8 +12,7 @@ for (let i = 0; i < 3; i += 1) {
   const answer = readlineSync.question('Your answer: ');
   let check;
   let minNum;
-  if ((number1 - number2) < 0) { minNum = number1; }
-  else { minNum = number2; }
+  if ((number1 - number2) < 0) { minNum = number1; } else { minNum = number2; }
 
   for (let n = 1; n <= minNum; n += 1) {
     if (number1 % n === 0 && number2 % n === 0) { check = n; }
