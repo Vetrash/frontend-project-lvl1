@@ -13,7 +13,7 @@ for (let i = 0; i < 3; i += 1) {
   const enigmaIndex = Math.floor(Math.random() * lengthArray);
   const myArray = [number1];
   for (let n = 0; n < lengthArray; n += 1) {
-    myArray.push(myArray[i] + number2);
+    myArray.push(myArray[n] + number2);
   }
   const check = myArray[enigmaIndex];
   myArray[enigmaIndex] = '..';
