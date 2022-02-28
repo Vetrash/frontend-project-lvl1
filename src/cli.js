@@ -13,7 +13,7 @@ export const Ending = () => {
 };
 
 export const Check = (check, answer) => {
-  if (toString(check) === toString(answer) && answer.length !== 0) {
+  if (check == answer && answer.length !== 0) {
     console.log('Correct!');
   }
   else {
