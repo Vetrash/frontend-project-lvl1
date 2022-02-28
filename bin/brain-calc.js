@@ -7,7 +7,7 @@ Greeting();
 console.log('What is the result of the expression?');
 let score = 0;
 const operant = ['+', '-', '*', '/'];
-while (score <= 2) {
+for (let i = 0; i < 3; i += 1) {
   const number1 = Math.floor(Math.random() * 100);
   const number2 = Math.floor(Math.random() * 100);
   const operantIndex = Math.floor(Math.random() * 3);
@@ -31,7 +31,7 @@ while (score <= 2) {
       check = number1 + number2;
       break;
   }
-  score = Check(check, answer, score);
+  score = Check(check, answer);
   if (score === -1) {
     break;
   }

@@ -12,15 +12,14 @@ export const Ending = () => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export const Check = (check, answer, score) => {
-  if (check === answer) {
+export const Check = (check, answer) => {
+  if (toString(check) === toString(answer) && answer.length !== 0) {
     console.log('Correct!');
-    score += 1;
   }
   else {
     console.log(`'${answer}' is wrong answer. Correct answer was '${check}' `);
     console.log(`Let's try again, ${name}!`);
-    score = -1;
+    return -1;
   }
-  return score;
+  return 0;
 };
