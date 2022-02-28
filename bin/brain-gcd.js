@@ -6,8 +6,8 @@ Greeting();
 console.log('Find the greatest common divisor of given numbers.');
 let score = 0;
 for (let i = 0; i < 3; i += 1) {
-  const number1 = Math.floor(Math.random() * 100);
-  const number2 = Math.floor(Math.random() * 100);
+  const number1 = Math.floor(Math.random() * 99) + 1;
+  const number2 = Math.floor(Math.random() * 99) + 1;
   console.log(`Question: ${number1} ${number2}`);
   const answer = readlineSync.question('Your answer: ');
   let check;
