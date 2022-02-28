@@ -12,7 +12,7 @@ for (let i = 0; i < 3; i += 1) {
   const answer = readlineSync.question('Your answer: ');
   let check = 'yes';
   for (let n = 2; n < number1; n += 1) {
-    if (number1 % i === 0) {
+    if (number1 % n === 0) {
       check = 'no';
       break;
     }
