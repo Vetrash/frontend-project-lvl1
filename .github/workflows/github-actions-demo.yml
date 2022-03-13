@@ -4,10 +4,11 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: build package
-        run: |
-          make install
-      - name: Run linter
-        run: |
-          make lint
+     - name: clone my rep
+        uses: actions/checkout@v1      
+
+      - name: install 
+        run: make install
+
+      - name: run linter
+        run: make lint
