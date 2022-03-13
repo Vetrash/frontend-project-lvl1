@@ -1,6 +1,6 @@
-#!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import { Greeting, Ending, Check, question } from '../cli.js';
+import {
+  Greeting, Ending, Check, question,
+} from '../cli.js';
 import randomNum from '../random.js';
 
 const calc = () => {
