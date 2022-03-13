@@ -3,12 +3,7 @@ on: push
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    steps:
-     - name: clone my rep
-        uses: actions/checkout@v1      
-
-      - name: install 
-        run: make install
-
-      - name: run linter
-        run: make lint
+    steps:    
+    - uses: actions/checkout@v2 
+    - run: make install
+    - run: make lint
