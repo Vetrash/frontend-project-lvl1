@@ -15,7 +15,7 @@ const gcd = () => {
     for (let n = 1; n <= minNum; n += 1) {
       if (number1 % n === 0 && number2 % n === 0) { check = n; }
     }
-    const answer = question(` ${number1} ${number2}`); // задать вопрос и вернуть ответ
+    const answer = question(`${number1} ${number2}`); // задать вопрос и вернуть ответ
     score = Check(check, answer); // проверить коректность ответа
     if (score === -1) { break; } // определяем не верный ответ и заканчиваем игру
   }

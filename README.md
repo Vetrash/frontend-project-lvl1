@@ -5,6 +5,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
+[![.github/workflows/github-actions-demo.yml](https://github.com/Vetrash/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/Vetrash/frontend-project-lvl1/actions/workflows/github-actions-demo.yml)
+
 brain-even => Игра: "Проверка на чётность", пользователю нужно ответить является ли показаное число четным (yes) или нет (no)
 Пример работы: img\brain-even.PNG
 
