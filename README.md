@@ -1,10 +1,9 @@
 ### Hexlet tests and linter status:
+
 [![Actions Status](https://github.com/Vetrash/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Vetrash/frontend-project-lvl1/actions)
 
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-
-
-
 
 brain-even => Игра: "Проверка на чётность", пользователю нужно ответить является ли показаное число четным (yes) или нет (no)
 Пример работы: img\brain-even.PNG
@@ -20,3 +19,4 @@ brain-progression => Игра "Арифметическая прогрессия
 
 brain-prime => Игра "Простое ли число?", пользователю нужно ответить является ли показаное число простым (yes) или нет (no)
 Пример работы: img\brain-prime.PNG
+
