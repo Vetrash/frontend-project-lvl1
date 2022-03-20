@@ -1,19 +1,18 @@
-import {
-  Greeting, Ending, Check, question,
-} from '../cli.js';
+import startGame from '../index.js';
 import randomNum from '../random.js';
 
 const even = () => {
-  Greeting('Answer "yes" if the number is even, otherwise answer "no".');
-  let score = 0;
+  const mainQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const answers = [];
   for (let i = 0; i < 3; i += 1) {
     const number = randomNum(0, 100);
-    let check;
-    if (number % 2 === 0) { check = 'yes'; } else { check = 'no'; }
-    const answer = question(number); // задать вопрос и вернуть ответ
-    score = Check(check, answer); // проверить коректность ответа
-    if (score === -1) { break; }
+    let numberEven = 'no';
+    if (number % 2 === 0) { numberEven = 'yes'; }
+    const task = number;
+    const check = numberEven;
+    const answer = { task, check };
+    answers.push(answer);
   }
-  if (score !== -1) { Ending(); }
+  startGame(answers, mainQuestion);
 };
 export default even;

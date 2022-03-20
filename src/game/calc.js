@@ -1,12 +1,10 @@
-import {
-  Greeting, Ending, Check, question,
-} from '../cli.js';
 import randomNum from '../random.js';
+import startGame from '../index.js';
 
 const calc = () => {
-  Greeting('What is the result of the expression?');
-  let score = 0;
+  const mainQuestion = 'What is the result of the expression?';
   const operant = ['+', '-', '*', '/'];
+  const answers = [];
   for (let i = 0; i < 3; i += 1) {
     const number1 = randomNum(0, 100);
     const number2 = randomNum(0, 100);
@@ -29,10 +27,10 @@ const calc = () => {
         check = number1 + number2;
         break;
     }
-    const answer = question(`${number1} ${operant[operantIndex]} ${number2}`); // задать вопрос и вернуть ответ
-    score = Check(check, answer); // проверить коректность ответа
-    if (score === -1) { break; } // определяем не верный ответ и заканчиваем игру
+    const task = `${number1} ${operant[operantIndex]} ${number2}`;
+    const answer = { task, check };
+    answers.push(answer);
   }
-  if (score !== -1) { Ending(); } // заканчиваем игру поздравлениями
+  startGame(answers, mainQuestion);
 };
 export default calc;

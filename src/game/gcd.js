@@ -1,11 +1,9 @@
-import {
-  Greeting, Ending, Check, question,
-} from '../cli.js';
+import startGame from '../index.js';
 import randomNum from '../random.js';
 
 const gcd = () => {
-  Greeting('Find the greatest common divisor of given numbers.');
-  let score = 0;
+  const mainQuestion = 'Find the greatest common divisor of given numbers.';
+  const answers = [];
   for (let i = 0; i < 3; i += 1) {
     const number1 = randomNum(1, 100);
     const number2 = randomNum(1, 100);
@@ -15,10 +13,10 @@ const gcd = () => {
     for (let n = 1; n <= minNum; n += 1) {
       if (number1 % n === 0 && number2 % n === 0) { check = n; }
     }
-    const answer = question(`${number1} ${number2}`); // задать вопрос и вернуть ответ
-    score = Check(check, answer); // проверить коректность ответа
-    if (score === -1) { break; } // определяем не верный ответ и заканчиваем игру
+    const task = `${number1} ${number2}`;
+    const answer = { task, check };
+    answers.push(answer);
   }
-  if (score !== -1) { Ending(); }
+  startGame(answers, mainQuestion);
 };
 export default gcd;

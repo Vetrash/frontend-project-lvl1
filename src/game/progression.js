@@ -1,11 +1,9 @@
-import {
-  Greeting, Ending, Check, question,
-} from '../cli.js';
+import startGame from '../index.js';
 import randomNum from '../random.js';
 
 const progression = () => {
-  Greeting('What number is missing in the progression?');
-  let score = 0;
+  const mainQuestion = 'What number is missing in the progression?';
+  const answers = [];
 
   for (let i = 0; i < 3; i += 1) {
     const number1 = randomNum(0, 100);
@@ -18,10 +16,10 @@ const progression = () => {
     }
     const check = myArray[enigmaIndex];
     myArray[enigmaIndex] = '..';
-    const answer = question(myArray.join(' ')); // задать вопрос и вернуть ответ
-    score = Check(check, answer); // проверить коректность ответа
-    if (score === -1) { break; } // определяем не верный ответ и заканчиваем игру
+    const task = myArray.join(' ');
+    const answer = { task, check };
+    answers.push(answer);
   }
-  if (score !== -1) { Ending(); }
+  startGame(answers, mainQuestion);
 };
 export default progression;
