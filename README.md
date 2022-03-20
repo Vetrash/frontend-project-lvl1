@@ -32,24 +32,24 @@
   <h3>brain-even</h3>
   Игра: "Проверка на чётность", пользователю нужно ответить является ли показанное число четным (yes) или нет (no). Все другие ответы считаются неверными :smiling_imp: .<br>
  Пример работы:<br>
-<img  src ='./img/brain-even.png'  alt='brain-even'>
+<img  src ='./img/brain-even.PNG'  alt='brain-even'>
 
 <h3>brain-calc</h3>
 Игра: "Калькулятор", пользователю нужно решить показанное математическое выражение и ввести верный ответ. <br>
 Пример работы:<br>
-<img  src ='./img/brain-calc.png'  alt='brain-calc'>
+<img  src ='./img/brain-calc.PNG'  alt='brain-calc'>
 
 <h3>brain-gcd</h3>
 Игра "Наибольший общий делитель". Пользователь должен вычислить и ввести наибольший общий делитель показанный числе.<br>
 Пример работы:<br>
-<img  src ='./img/brain-gcd.png'  alt='brain-gcd'>
+<img  src ='./img/brain-gcd.PNG'  alt='brain-gcd'>
 
 <h3>brain-progression</h3>
 Игра "Арифметическая прогрессия". Пользователь должен ввести недостающее число в арифметической прогрессии.<br>
 Пример работы:<br>
-<img  src ='./img/brain-progression.png'  alt='brain-progression'>
+<img  src ='./img/brain-progression.PNG'  alt='brain-progression'>
 
 <h3>brain-prime</h3>
  Игра "Простое ли число?", пользователю нужно ответить является ли показанное число простым (yes) или нет (no).<br>
 Пример работы:<br>
-<img  src ='./img/brain-prime.png'  alt='brain-prime'>
+<img  src ='./img/brain-prime.PNG'  alt='brain-prime'>
