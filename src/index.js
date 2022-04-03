@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 
 const welcomeText = 'Welcome to the Brain Games!';
+const numberOfRounds = 3;
 
 const Ending = (name) => {
   console.log(`Congratulations, ${name}!`);
@@ -9,12 +10,11 @@ const Ending = (name) => {
 const Check = (name, check, answer) => {
   if (String(check) === answer && answer.length !== 0) {
     console.log('Correct!');
-  } else {
-    console.log(`'${answer}' is wrong answer. Correct answer was '${check}' `);
-    console.log(`Let's try again, ${name}!`);
-    return false;
+    return true;
   }
-  return true;
+  console.log(`'${answer}' is wrong answer. Correct answer was '${check}' `);
+  console.log(`Let's try again, ${name}!`);
+  return false;
 };
 
 const question = (task) => {
@@ -23,19 +23,18 @@ const question = (task) => {
   return answer;
 };
 
-const startGame = (answers, mainQuestion) => {
+const engineGame = (preparation, mainQuestion) => {
   console.log(welcomeText);
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
   console.log(mainQuestion);
 
-  for (let i = 0; i < 3; i += 1) {
-    const answer = question(answers[i].task); // узнали ответ игрока
-    const checket = Check(name, answers[i].check, answer); // проверили верность ответа
-    if (checket === true && i === 2) {
-      Ending(name); // окончили игру если все ответы были верные
-    }
-    if (checket === false) { break; }// окончили игру если ответ был неверный
+  for (let i = 0; i < numberOfRounds; i += 1) {
+    const { task, check } = preparation();
+    const answer = question(task); // узнали ответ игрока
+    const checket = Check(name, check, answer); // проверили верность ответа
+    if (checket === false) { return; }// окончили игру если ответ был неверный
   }
+  Ending(name); // окончили игру если все ответы были верные
 };
-export default startGame;
+export default engineGame;
