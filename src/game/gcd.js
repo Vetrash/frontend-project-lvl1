@@ -2,13 +2,10 @@ import engineGame from '../index.js';
 import randomNum from '../random.js';
 
 const gcdCheck = (num1, num2) => {
-  let minNum = num2;
-  let solution = 0;
-  if ((num1 - num2) < 0) { minNum = num1; }
-  for (let n = 1; n <= minNum; n += 1) {
-    if (num1 % n === 0 && num2 % n === 0) { solution = n; }
+  if (!num2) {
+    return num1;
   }
-  return solution;
+  return gcdCheck(num2, num1 % num2);
 };
 
 const gcdPreparation = () => {
