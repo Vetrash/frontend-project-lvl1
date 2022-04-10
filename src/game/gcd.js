@@ -1,4 +1,4 @@
-import gcdPreparation from '../gamePreparation/gcdPreparation.js';
+import gcdPreparation from './gcdPreparation.js';
 import engineGame from '../index.js';
 
 const gcd = () => {

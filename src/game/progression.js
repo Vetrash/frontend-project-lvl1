@@ -1,5 +1,5 @@
 import engineGame from '../index.js';
-import progressionPreparation from '../gamePreparation/progressionPreparation copy.js';
+import progressionPreparation from './progressionPreparation.js';
 
 const progression = () => {
   const mainQuestion = 'What number is missing in the progression?';

@@ -1,5 +1,9 @@
 import randomNum from '../random.js';
-import isEven from '../isEven.js';
+
+const isEven = (num) => {
+  if (num % 2 === 0) { return true; }
+  return false;
+};
 
 const evenPreparation = () => {
   const number = randomNum(1, 100);

@@ -1,4 +1,4 @@
-import primePreparation from '../gamePreparation/primePreparation.js';
+import primePreparation from './primePreparation.js';
 import engineGame from '../index.js';
 
 const prime = () => {

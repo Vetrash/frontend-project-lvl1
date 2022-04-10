@@ -1,5 +1,11 @@
 import randomNum from '../random.js';
-import isPrime from '../isPrime.js';
+
+const isPrime = (num) => {
+  for (let n = 2; n < num; n += 1) {
+    if (num % n === 0) { return false; }
+  }
+  return true;
+};
 
 const primePreparation = () => {
   const number1 = randomNum(2, 100);
